@@ -7,6 +7,7 @@ import {
 import Characters from "./components/characters/Characters";
 import React from "react";
 import Inventorys from "./components/inventorys/Inventorys";
+
 import CharacterDetails from "./components/characterDetails/CharacterDetails";
 
 export default function App() {

@@ -8,10 +8,14 @@ const getCharacter = () => {
     return axiosInstance.get('/cast')
 };
 
+const getOneCharacter = (id) => {
+    return axiosInstance.get(`/cast/${id}`)
+};
+
 const getInventory = () => {
     return axiosInstance.get('/inventory')
 };
 
 
 
-export {getCharacter, getInventory, axiosInstance}
+export {getCharacter, getOneCharacter, getInventory, axiosInstance}
