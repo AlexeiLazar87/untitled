@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import Post from "../post/Post";
 
 
 export default function UserWithPost(props) {
@@ -8,15 +9,13 @@ export default function UserWithPost(props) {
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
             .then(value => value.json())
-            .then(value => {
-                setUserWithPost(value)
-            })
+            .then(value => setUserWithPost(value))
     }, [id])
 
     return (
         <div>
             {
-                userWithPost && userWithPost.title
+                userWithPost && userWithPost.map(item => <Post key={item.id} item={item}/>)
             }
         </div>
     );
