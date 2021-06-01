@@ -9,4 +9,8 @@ import {User} from "../../models/User";
 export class UserComponent {
   @Input()
   user: User;
+
+  goToUserDetails(): void {
+    console.log(this.user)
+  }
 }

@@ -9,4 +9,8 @@ import {Post} from "../../models/Post";
 export class PostComponent {
   @Input()
   post: Post;
+
+  goToPostDetails(): void {
+    console.log(this.post)
+  }
 }
