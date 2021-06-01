@@ -6,6 +6,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {UserComponent} from './components/user/user.component';
 import {PostsComponent} from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
+import {RouterModule} from "@angular/router";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -13,11 +15,17 @@ import { PostComponent } from './components/post/post.component';
     UsersComponent,
     UserComponent,
     PostsComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: 'home',component: HomeComponent},
+      {path: 'users',component: UsersComponent},
+      {path: 'posts',component: PostsComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
